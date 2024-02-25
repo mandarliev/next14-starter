@@ -15,7 +15,6 @@
 body {
     background-color: var(--bg);
     color: var(--text);
-
 }
 
 a {
@@ -24,7 +23,6 @@ a {
 }
 
 .container {
-    width: 1536px;
     margin: auto;
     padding-left: 50px;
     padding-right: 50px;
