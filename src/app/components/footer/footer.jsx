@@ -1,9 +1,12 @@
-import React from 'react'
+import styles from "./footer.module.css";
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className={styles.container}>
+      <div className={styles.logo}>mandarliev</div>
+      <div className={styles.text}>Mandarliev © All rights reserved.</div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
