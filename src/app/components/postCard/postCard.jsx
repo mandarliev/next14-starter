@@ -17,14 +17,9 @@ const PostCard = ({ post }) => {
         <span className={styles.date}>01.01.2023</span>
       </div>
       <div className={styles.bottom}>
-        <h1 className={styles.title}>Title</h1>
-        <p className={styles.desc}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
-          laudantium sit! Aliquid, nulla fuga rem quaerat libero omnis sit ipsam
-          doloribus possimus cupiditate fugit sint temporibus distinctio dolorem
-          animi nemo.
-        </p>
-        <Link className={styles.link} href="/blog/post">
+        <h1 className={styles.title}>{post.title}</h1>
+        <p className={styles.desc}>{post.body}</p>
+        <Link className={styles.link} href={`/blog/${post.id}`}>
           READ MORE
         </Link>
       </div>
