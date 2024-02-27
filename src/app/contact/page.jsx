@@ -1,6 +1,7 @@
-// "use client";
+"use client";
 import Image from "next/image";
 import styles from "./contact.module.css";
+import { useState, useEffect } from "react";
 // import dynamic from "next/dynamic";
 // import HydrationTest from "@/components/hydrationTest";
 
@@ -12,9 +13,14 @@ export const metadata = {
 };
 
 const ContactPage = () => {
-  // const a = Math.random();
+  const [isClient, setIsClient] = useState(false);
 
-  // console.log(a);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const a = Math.random();
+  console.log(a);
 
   return (
     <div className={styles.container}>
@@ -22,8 +28,7 @@ const ContactPage = () => {
         <Image src="/contact.png" alt="" fill className={styles.img} />
       </div>
       <div className={styles.formContainer}>
-        {/* <HydrationTestNoSSR/> */}
-        {/* <div suppressHydrationWarning>{a}</div> */}
+        {isClient && a}
         <form action="" className={styles.form}>
           <input type="text" placeholder="Name and Surname" />
           <input type="text" placeholder="Email Address" />
